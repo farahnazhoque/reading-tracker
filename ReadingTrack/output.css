@@ -7,8 +7,7 @@
   }
   
   .container {
-    background: #111;
-    background-image: linear-gradient(45deg, #1b2838, #111);
+    background:  linear-gradient(178.6deg, rgb(20, 36, 50) 11.8%, rgb(124, 143, 161) 83.8%);
     align-items: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr) ) ;
@@ -152,7 +151,7 @@
 }
 
 #searchInput:focus {
-    border-color: #f7aec2; /* Change border color on focus */
+    border-color: #6587a1; /* Change border color on focus */
     outline: none; /* Remove the default focus outline */
 }
 
@@ -161,13 +160,49 @@ button {
   margin: 5px; /* Add a little margin around the button */
   border: none; /* Remove default border */
   border-radius: 5px; /* Rounded corners */
-  background-color: #f7aec2; /* A nice shade of blue */
-  color: white; /* White text */
+  background-color: #cbdced; /* A nice shade of blue */
+  color: #efefe9; /* White text */
   font-size: 16px; /* Make the text a bit larger */
   cursor: pointer; /* Change cursor to pointer on hover */
   transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
+
 button:hover {
-  background-color: #fa7196; /* Darken the button a bit on hover */
+  background-color: #6587a1; /* Darken the button a bit on hover */
+}
+
+.my-list-button {
+  color: #6587a1;
+}
+.my-list-button:hover {
+  color: #e3ecec;
+  background-color: #85a9b5;
+}
+
+.book-author {
+  color: #a1bbd3;
+  font-style: italic;
+}
+
+.book-title {
+  color: #e3ecec;
+}
+
+.book img {
+  width: 150px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  -o-object-fit: cover;
+     object-fit: cover; /* This ensures the image covers the area without stretching */
+  cursor: pointer; /* Changes cursor to indicate it's clickable */
+}
+
+.book a {
+  display: inline-block; /* Needed to apply the transformation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+.book a:hover img {
+  transform: scale(1.05); /* Scale up the image */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
 }
