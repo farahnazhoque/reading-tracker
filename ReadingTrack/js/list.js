@@ -1,17 +1,6 @@
-function searchBooks() {
-    let query = document.getElementById('searchInput').value;
-    query = query.toLowerCase(); 
-    query = query.replace(/[^a-z]/g, '');
-    let apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${query}`;
-
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => displayBooks(data));
-}
-
-function displayBooks(data) {
+export function review(data) {
     let booksContainer = document.getElementById('booksContainer');
-    booksContainer.innerHTML = ''; // Clear existing books
+    booksContainer.innerHTML = '';
 
     data.items.forEach(book => {
         let bookDiv = document.createElement('div');
@@ -41,21 +30,19 @@ function displayBooks(data) {
         bookDiv.appendChild(author);
 
         // Create 'Add to My List' button
-        let myListButton = document.createElement('button');
-        myListButton.textContent = 'Add to My List';
-        myListButton.classList.add('my-list-button');
-        myListButton.addEventListener('click', function() {
-            addToMyList(book);
+        let reviewButton = document.createElement('button');
+        reviewButton.textContent = 'Review';
+        reviewButton.classList.add('review-button');
+        reviewButton.addEventListener('click', function() {
+            reviewDirect(book);
         });
-        bookDiv.appendChild(myListButton);
+        bookDiv.appendChild(reviewButton);
 
         // Append the bookDiv to the booksContainer
         booksContainer.appendChild(bookDiv);
     });
 }
 
-function addToMyList(book) {
-    // Implement functionality to add the book to 'mylist.html' or store in local storage/session storage
-    console.log('Added to My List:', book.volumeInfo.title); // Placeholder for actual add to list functionality
-    // You can store the book data in localStorage or send it to the server or simply redirect to 'mylist.html' with book details
+function reviewDirect(book) {
+    console.log("done");åå
 }

@@ -206,3 +206,20 @@ button:hover {
   transform: scale(1.05); /* Scale up the image */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
 }
+
+.button-link {
+  padding: 10px 20px; /* Add padding to increase the button size */
+  margin: 5px; /* Add a little margin around the button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #cbdced; /* A nice shade of blue */
+  color: #efefe9; /* White text */
+  font-size: 16px; /* Make the text a bit larger */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+
+.button-link:hover {
+  background-color: #6587a1; /* Darken the button a bit on hover */
+}
